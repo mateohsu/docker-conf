@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  server:
+    image: mzz2017/v2raya
+    container_name: v2raya
+    privileged: true
+    restart: always
+    network_mode: "host"
+    volumes:
+      - /etc/resolv.conf:/etc/resolv.conf
+      - ./data:/etc/v2raya
